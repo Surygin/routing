@@ -1,1 +1,3 @@
-<h1>This is About page</h1>
+<?php
+
+echo "<h1>This is About page</h1>";
