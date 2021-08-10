@@ -1,23 +1,9 @@
 <?php
 
-$route = $_SERVER['REQUEST_URI'];
+include('class/routing.php');
 
-$routes = [
-  '/'. 'routing/'     =>  "public/home.php",
-  "/routing/about"     =>  "public/about.php",
-  "/routing/contacts"  =>  "public/contacts.php"
-];
+$route = new MyRoute();
+$route->Get_my_route($_SERVER['REQUEST_URI']);
 
-var_dump($routes[$route]); print('<br>');
-var_dump($route);
-
-if(array_key_exists($route, $routes)){
-  include $routes[$route]; exit;
-}
-else {
-  print(404) . '<br>';
-}
-
-#if ($route == '/' . 'routing/'){
-#  include('public/home.php');
-#}
+#var_dump($routes[$route]); print('<br>');
+#var_dump($route);
