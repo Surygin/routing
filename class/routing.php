@@ -6,7 +6,6 @@ class MyRoute {
             '/'. 'routing/'     =>  "public/home.php",
             "/routing/about"     =>  "public/about.php",
             "/routing/contacts"  =>  "public/contacts.php",
-            '/routing/post/' . $i   =>  "public/home.php?post=" . $i,
           ];
         
         if(array_key_exists($route, $routes)){
